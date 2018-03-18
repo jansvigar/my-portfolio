@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Work Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    /* background-color: #FCFFF5; */
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0.5px 0.5px 4px 0.5px #aaa;
+    padding: 0 20px;
+}
+
+.brand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.brand>:nth-child(2) {
+    margin-left: 15px;
+}
+
+.brand .logo {
+    max-width: 40px;
+}
+
+.brand .site-title {
+    font-size: 1.5rem;
+}
+
+/* Main */
+main {
+    flex: 1;
+}
+/* Section: Home */
+
+section.home {
+    /* width: 100vw; */
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text {
+    max-width: 300px;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section.home button {
+    padding: 15px;
+    background: transparent;
+    font-size: 1rem;
+    border: 0.8px solid black;
+    box-shadow: 0.5px 0.5px 1px 0.5px #aaa;
+    cursor: pointer;
+}
