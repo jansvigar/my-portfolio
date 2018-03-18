@@ -65,9 +65,14 @@ header {
     transition: transform 0.5s ease-in, opacity 0.5s;
 }
 
+.site-navigation.hidden {
+    visibility: hidden;
+}
+
 .site-navigation.overlay.open {
     transform: translateX(0);
     opacity: 1;
+    visibility: visible;
     transition: transform 0.5s ease-in, opacity 0.5s;
 }
 
