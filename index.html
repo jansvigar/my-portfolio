@@ -11,12 +11,22 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="brand">
-            <img src="img/jv_logo.svg" alt="logo" class="logo">
-            <span class="site-title">janvigar.com</span>    
+    <header class="site-header">
+        <div class="header-title-area">
+            <div class="brand">
+                <img src="img/jv_logo.svg" alt="logo" class="logo">
+                <span class="site-title">janvigar.com</span>    
+            </div>
+            <i id="menu-icon" class="fas fa-bars fa-lg"></i>
         </div>
-        <i class="fas fa-bars fa-lg"></i>
+        <nav class="site-navigation overlay">
+            <span class="close-icon">X</span>
+            <li>Home</li>
+            <li>Portfolio</li>
+            <li>Skill</li>
+            <li>Resume</li>
+            <li>Contact</li>
+        </nav>
     </header>
     <main>
         <section class="home">
@@ -27,5 +37,6 @@
             <button>View my work</button>
         </section>
     </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
