@@ -1,4 +1,4 @@
-* {
+* , *:before, *:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -47,12 +47,16 @@ header {
     cursor: pointer;
 }
 
+.site-navigation li:hover {
+    background-color: #FCFFF5;
+}
+
 .site-navigation li:nth-of-type(1) {
     border-top: solid 1px rgb(190, 190, 190);
 }
 
 .site-navigation.overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -63,6 +67,8 @@ header {
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.5s ease-in, opacity 0.5s;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .site-navigation.hidden {
@@ -111,10 +117,12 @@ main {
 
 section.home {
     height: calc(100vh - 90px);
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0.5px 0.5px 1px 0.5px rgba(59, 55, 55, 0.4);
 }
 
 .intro-text {
@@ -131,4 +139,45 @@ section.home button {
     border: 0.8px solid black;
     box-shadow: 0.5px 0.5px 1px 0.5px #aaa;
     cursor: pointer;
+}
+
+/* Section: Portfolio */
+
+section.projects {
+    height: 100vh;
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+.projects-grid {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.project {
+    width: 300px;
+    display: flex;
+    flex-flow: column wrap;
+    border: solid 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.projects h1 {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    padding: 30px;
+}
+
+.project img {
+    /* border: 1px solid black;
+    padding: 10px; */
+}
+
+.project-description {
+    text-align: center;
+    padding: 10px;
+    /* border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black; */
 }

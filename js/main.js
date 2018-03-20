@@ -4,7 +4,6 @@ var menuOverlayCloseIcon = document.querySelector('.site-navigation .close-icon'
 
 menuIcon.addEventListener("click", handleMenuOpen);
 
-
 function handleMenuOpen() {
     menuOverlay.className += ' open';
     menuOverlay.className = menuOverlay.className.replace(/\bhidden\b/g, '');
