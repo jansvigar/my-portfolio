@@ -158,7 +158,7 @@ main {
 section.home {
     height: 100%;
     height: 100vh;
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;

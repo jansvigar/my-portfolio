@@ -20,6 +20,7 @@ homeButton.addEventListener('click', handleNavigationItemClick);
 function handleNavigationItemClick(e) {
     e.preventDefault();
     var target = e.currentTarget.getAttribute('href') || e.currentTarget.children[0].getAttribute('href');
+    console.log(target);
     if(history.pushState) {
         history.pushState(null, null, target);
     }
@@ -55,10 +56,11 @@ function scrollTo(destinationInPixel, durationInMs) {
     var count = 0, currentPos;
 
     scrollInterval = setInterval(function() {
-        if(document.documentElement.scrollTop != destinationInPixel) {
+        if((document.documentElement.scrollTop || document.body.scrollTop) != destinationInPixel) {
             count++;
             currentPos = startingPos + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
             document.documentElement.scrollTop = currentPos;
+            document.body.scrollTop = currentPos;
         } else {
             clearInterval(scrollInterval);
         }
