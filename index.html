@@ -13,37 +13,51 @@
 <body>
     <header class="site-header">
         <div class="header-title-area">
-            <div class="brand">
+            <a class="brand" href="#home">
                 <img src="img/jv_logo.svg" alt="logo" class="logo">
                 <span class="site-title">janvigar.com</span>    
-            </div>
+            </a>
             <i id="menu-icon" class="fas fa-bars fa-lg"></i>
         </div>
         <nav class="site-navigation overlay hidden">
             <span class="close-icon">X</span>
-            <li>Home</li>
-            <li>Projects</li>
-            <li>Skill</li>
-            <li>Resume</li>
-            <li>Contact</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
         </nav>
     </header>
     <main>
-        <section class="home">
+        <section id="home" class="home">
             <div class="intro-text">
                 Hello, <br><br>My name is <br>Jan Vigar.
                 <br>I am a Front-End Developer.
             </div>
-            <button>View my work</button>
+            <button type="button" class="big"><a href="#projects">View my work</a></button>
         </section>
-        <section class="projects">
+        <section id="projects" class="projects">
             <h1>Projects</h1>
             <div class="projects-grid">
                 <div class="project">
-                    <img src="img/img3-300x300.jpeg" alt="Project Readable">
+                    <img src="img/img1-250x150.jpeg" alt="Project Readable">
                     <div class="project-description">
                         <h3>Project Title</h3>
                         <p>This is a description</p>
+                        <button type="button" class="small">View details</button>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="img/img1-250x150.jpeg" alt="Project Readable">
+                    <div class="project-description">
+                        <h3>Project Title</h3>
+                        <p>This is a description</p>
+                        <button type="button" class="small">View details</button>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="img/img1-250x150.jpeg" alt="Project Readable">
+                    <div class="project-description">
+                        <h3>Project Title</h3>
+                        <p>This is a description</p>
+                        <button type="button" class="small">View details</button>
                     </div>
                 </div>
             </div>
