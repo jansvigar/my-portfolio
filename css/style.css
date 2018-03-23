@@ -283,3 +283,25 @@ section.about {
 .project-description>* {
     margin-top: 8px;
 }
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    background-color: #1C1C1C;
+    color: #aaa;
+    text-align: center;
+}
+
+.social-icon-wrapper {
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+.social-icon {
+    width: 2rem;
+}
