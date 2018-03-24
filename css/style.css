@@ -22,7 +22,7 @@ section {
     align-items: center;
 }
 
-section h1 {
+section>h1 {
     text-transform: uppercase;
     letter-spacing: 6px;
     margin-bottom: 30px;
@@ -55,11 +55,11 @@ button:focus {
     outline: none;
 }
 
-button.big {
+.big {
     padding: 20px;
 }
 
-button.small {
+.small {
     font-size: 0.9rem;
 }
 
@@ -76,7 +76,7 @@ header {
     box-shadow: 0.5px 0.5px 4px 0.5px #aaa;
     padding: 0 20px;
     background-color: rgba(255,255,254,0.95);
-    z-index: 9999;
+    z-index: 99;
 }
 
 .header-title-area {
@@ -120,7 +120,7 @@ header {
     right: 0;
     padding-top: 60px;
     background: white;
-    z-index: 999;
+    z-index: 9;
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.5s ease-in, opacity 0.5s;
@@ -172,7 +172,7 @@ main {
 
 /* Section: Home */
 
-section.home {
+.home {
     height: 100%;
     height: 100vh;
     min-height: 500px;
@@ -196,7 +196,7 @@ section.home {
 
 /* Section: About */
 
-section.about {
+.about {
     background: linear-gradient(rgba(255, 240, 165, 0.6), 20% ,rgba(255, 176, 59, 0.6), 50%, rgba(182, 73, 38, 0.4));
 }
 
@@ -257,7 +257,11 @@ section.about {
     width: 6rem;
 }
 
-/* Section: Portfolio */
+/* Section: Projects */
+
+.projects {
+    background-color: #FFF0A5;
+}
 
 .projects-grid {
     display: flex;
@@ -273,6 +277,7 @@ section.about {
     box-shadow: 0px 0px 1px #aaa;
     padding: 10px;
     margin: 15px 0;
+    background-color: #fefefe;
 }
 
 .project-description {
@@ -282,6 +287,80 @@ section.about {
 
 .project-description>* {
     margin-top: 8px;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #1C1C1C;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s linear 500ms, opacity 500ms;
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear 0s, opacity 500ms;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    padding: 50px 20px;
+    border: 1px solid #888;
+    width: 90%;
+    height: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%) scale(0,0);
+    transition: transform 300ms ease-out;
+}
+
+.modal.open .modal-content {
+    transform: translate(-50%, -50%) scale(1,1);
+    transition: transform 300ms ease-in 100ms;
+}
+
+.modal .modal-close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+}
+
+.modal-content h1 {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #888;
+}
+
+.modal-content p {
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+.modal-content p:nth-of-type(1) {
+    font-size: 0.9rem;
+    font-style: italic;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 100%;
 }
 
 /* Footer */

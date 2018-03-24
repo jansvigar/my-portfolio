@@ -22,7 +22,10 @@
         <nav class="site-navigation overlay hidden">
             <span class="close-icon">X</span>
             <li class="scroll"><a href="#home">Home</a></li>
+            <li class="scroll"><a href="#about">About</a></li>
+            <li class="scroll"><a href="#skills">Skills</a></li>
             <li class="scroll"><a href="#projects">Projects</a></li>
+            <li class="scroll"><a href="#footer">Contact</a></li>            
         </nav>
     </header>
     <main>
@@ -127,7 +130,45 @@
         <section id="projects" class="projects">
             <h1>Projects</h1>
             <div class="projects-grid">
-                <div class="project">
+                <div class="project" id="portfolio1">
+                    <img src="img/img1-250x150.jpeg" alt="Readable Project">
+                    <div class="project-description">
+                        <h3>Project Title</h3>
+                        <p>This is a description</p>
+                        <button type="button" class="small">View details</button>
+                    </div>
+                </div>
+                <div class="modal" id="modal-portfolio-1" data-projectid="portfolio1">
+                    <div class="modal-content">
+                        <span class="modal-close-icon">X</span>
+                        <img src="img/img1-250x150.jpeg" alt="portfolio screenshot">
+                        <h1>Readable</h1>
+                        <p>Technology Stack:<br> ES6, React, Redux, NPM, Webpack</p>
+                        <p>Built a social content and discussion web application that allows users to submit content in addition to voting and commenting. 
+                            Leveraged React to build a dynamic user interface, as well as Redux to manage global application state.
+                        </p>
+                    </div>
+                </div>
+                <div class="project" id="portfolio2">
+                    <img src="img/img1-250x150.jpeg" alt="MyReads Project">
+                    <div class="project-description">
+                        <h3>Project Title</h3>
+                        <p>This is a description</p>
+                        <button type="button" class="small">View details</button>
+                    </div>
+                </div>
+                <div class="modal" id="modal-portfolio-2" data-projectid="portfolio2">
+                    <div class="modal-content">
+                        <span class="modal-close-icon">X</span>
+                        <img src="img/img1-250x150.jpeg" alt="portfolio screenshot">
+                        <h1>MyReads</h1>
+                        <p>Technology Stack:<br> ES6, React, Redux, NPM, Webpack</p>
+                        <p>Built a social content and discussion web application that allows users to submit content in addition to voting and commenting. 
+                            Leveraged React to build a dynamic user interface, as well as Redux to manage global application state.
+                        </p>
+                    </div>
+                </div>
+                <div class="project" id="portfolio3">
                     <img src="img/img1-250x150.jpeg" alt="Project Readable">
                     <div class="project-description">
                         <h3>Project Title</h3>
@@ -135,25 +176,20 @@
                         <button type="button" class="small">View details</button>
                     </div>
                 </div>
-                <div class="project">
-                    <img src="img/img1-250x150.jpeg" alt="Project Readable">
-                    <div class="project-description">
-                        <h3>Project Title</h3>
-                        <p>This is a description</p>
-                        <button type="button" class="small">View details</button>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="img/img1-250x150.jpeg" alt="Project Readable">
-                    <div class="project-description">
-                        <h3>Project Title</h3>
-                        <p>This is a description</p>
-                        <button type="button" class="small">View details</button>
+                <div class="modal" id="modal-portfolio-3" data-projectid="portfolio3">
+                    <div class="modal-content">
+                        <span class="modal-close-icon">X</span>
+                        <img src="img/img1-250x150.jpeg" alt="portfolio screenshot">
+                        <h1>Mobile Flashcards</h1>
+                        <p>Technology Stack:<br> ES6, React, Redux, NPM, Webpack</p>
+                        <p>Built a social content and discussion web application that allows users to submit content in addition to voting and commenting. 
+                            Leveraged React to build a dynamic user interface, as well as Redux to manage global application state.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <footer>
+        <footer id="footer">
             <div class="social-icons">
                 <a href="https://github.com/jansvigar" target="_blank" class="social-icon-wrapper">
                     <svg class="social-icon" viewBox="0 0 128 128">

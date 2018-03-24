@@ -4,10 +4,42 @@ var menuOverlayCloseIcon = document.querySelector('.site-navigation .close-icon'
 var scrollElements = document.querySelectorAll('.scroll');
 var scrollInterval;
 
+var modalElements = document.querySelectorAll('.modal');
+
+for(var i = 0; i < modalElements.length; i++) {
+    var modal = modalElements[i];
+    var modalCloseBtn = modal.querySelector('.modal-close-icon');
+    var viewDetailBtn = document.getElementById(modal.dataset.projectid).querySelector('button');
+    
+    (function(modal){
+        viewDetailBtn.addEventListener('click', function(){
+            showModal(modal);
+        });
+
+        modalCloseBtn.addEventListener('click', function(){
+            closeModal(modal);
+        });
+    })(modal); 
+}
+
+window.addEventListener('click', function(e){
+    if(e.target.className === 'modal open'){
+        e.target.className = 'modal';
+    }
+});
+
 menuIcon.addEventListener('click', openMenu);
 
 for(var i = 0; i < scrollElements.length; i++) {
     scrollElements[i].addEventListener('click', handleNavigationItemClick);
+}
+
+function showModal(modal) {
+    modal.className = 'modal open';
+}
+
+function closeModal(modal) {
+    modal.className = 'modal';
 }
 
 function handleNavigationItemClick(e) {
@@ -50,6 +82,10 @@ function scrollTo(destinationInPixel, durationInMs) {
     var diff = destinationInPixel - startingPos;
     var scrollStep = Math.PI / (durationInMs / 10);
     var count = 0, currentPos;
+    var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
+        document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
+    var maxScrollHeight = limit - window.innerHeight;
+    destinationInPixel = Math.min(destinationInPixel, maxScrollHeight);
 
     scrollInterval = setInterval(function() {
         if((document.documentElement.scrollTop || document.body.scrollTop) != destinationInPixel) {
