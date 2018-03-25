@@ -63,6 +63,10 @@ button:focus {
     font-size: 0.9rem;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 /* Header */
 
 header {
@@ -150,10 +154,6 @@ header {
     transition: transform 0.5s ease-in, opacity 0.5s;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-.site-navigation.hidden {
-    visibility: hidden;
 }
 
 .site-navigation.overlay.open {
