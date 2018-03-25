@@ -18,7 +18,14 @@
                 <span class="site-title">janvigar.com</span>    
             </a>
             <i id="menu-icon" class="fas fa-bars fa-lg"></i>
-        </div>
+            <nav class="site-navigation">
+                <li class="scroll"><a href="#home">Home</a></li>
+                <li class="scroll"><a href="#about">About</a></li>
+                <li class="scroll"><a href="#skills">Skills</a></li>
+                <li class="scroll"><a href="#projects">Projects</a></li>
+                <li class="scroll"><a href="#footer">Contact</a></li>
+            </nav>
+        </div>    
         <nav class="site-navigation overlay hidden">
             <span class="close-icon">X</span>
             <li class="scroll"><a href="#home">Home</a></li>
@@ -26,7 +33,7 @@
             <li class="scroll"><a href="#skills">Skills</a></li>
             <li class="scroll"><a href="#projects">Projects</a></li>
             <li class="scroll"><a href="#footer">Contact</a></li>            
-        </nav>
+        </nav> 
     </header>
     <main>
         <section id="home" class="home">
@@ -47,22 +54,14 @@
                     
                 <article class="profile-story">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis faucibus lacinia sapien, scelerisque sodales lorem pretium ac. 
-                        Curabitur non turpis eget mi eleifend hendrerit. Nam tortor metus, blandit eget enim nec, sodales mollis massa. 
-                        Duis vulputate cursus dui, id sagittis risus. Sed dictum dui sed velit posuere, id finibus purus porttitor. 
-                        Donec pharetra augue ullamcorper lectus pretium, quis aliquam orci tempor. Proin semper porta ex, vitae luctus felis mollis non. 
-                        Curabitur volutpat, nibh in rhoncus vulputate, ligula elit varius mi, sed tristique erat arcu nec eros. 
-                        Aenean et mauris vel lectus tincidunt vehicula sed vel turpis. In tempor, quam id ultricies semper, est nibh pretium enim, 
-                        sed sodales purus purus eget ex. Nunc consequat nisl odio, non interdum arcu aliquam a. Vivamus sed aliquet libero, 
-                        sed aliquet ipsum. Aliquam convallis diam sed mauris fringilla feugiat. Ut facilisis velit eget tincidunt efficitur. 
-                        Sed nec lorem diam.
+                        Based out of San Francisco Bay Area, I am an IT professional/Front-end developer with experience in the Healthcare industry. 
+                        I taught myself web development using HTML, CSS and Javascript during my position as IT Manager. 
+                        I was able to quickly pick up these technologies due to my background as an ASP.Net C# programmer. I immediately fell in love with front-end web development. 
+                        I love how I am able to build beautiful easy-to-use web application accessible by many people around the world. To further deepen my knowledge and mastery of the various front-end technologies, 
+                        I signed up for Udacity React and Front end Nanodegree programs. I graduated the React nanodegree and am currently working on the front-end nanodegree.
                     </p>
                     <p>
-                        Sed imperdiet ex ac facilisis lobortis. In enim erat, dapibus et tellus eget, blandit dignissim enim. 
-                        Donec pretium maximus mi, a tempor mauris vehicula sit amet. Nunc et urna venenatis, eleifend diam ac, 
-                        vehicula leo. Maecenas ac tortor tincidunt, ullamcorper lacus nec, cursus massa. Ut consequat turpis ac eros bibendum tincidunt. 
-                        Fusce aliquet porttitor ante et accumsan. Maecenas vitae mi vitae magna facilisis ullamcorper. Praesent maximus pretium enim, 
-                        vitae elementum dui blandit et. In luctus eget risus a dapibus. Vivamus quis turpis orci.
+                        When I am not coding, I enjoy travelling the world with my lovely wife. We are also always looking for good place to eat around the bay area. 
                     </p>
                 </article>
             </div>
@@ -131,17 +130,17 @@
             <h1>Projects</h1>
             <div class="projects-grid">
                 <div class="project" id="portfolio1">
-                    <img src="img/img1-250x150.jpeg" alt="Readable Project">
+                    <img src="img/screenshot-readable-2x.jpg" alt="Readable Project">
                     <div class="project-description">
-                        <h3>Project Title</h3>
-                        <p>This is a description</p>
+                        <h3>Readable</h3>
+                        <p>Social content and discussion web application</p>
                         <button type="button" class="small">View details</button>
                     </div>
                 </div>
                 <div class="modal" id="modal-portfolio-1" data-projectid="portfolio1">
                     <div class="modal-content">
                         <span class="modal-close-icon">X</span>
-                        <img src="img/img1-250x150.jpeg" alt="portfolio screenshot">
+                        <img src="img/screenshot-readable-2x.jpg" alt="portfolio screenshot">
                         <h1>Readable</h1>
                         <p>Technology Stack:<br> ES6, React, Redux, NPM, Webpack</p>
                         <p>Built a social content and discussion web application that allows users to submit content in addition to voting and commenting. 
@@ -150,40 +149,38 @@
                     </div>
                 </div>
                 <div class="project" id="portfolio2">
-                    <img src="img/img1-250x150.jpeg" alt="MyReads Project">
+                    <img src="img/screenshot-myreads-2x.jpg" alt="MyReads Project">
                     <div class="project-description">
-                        <h3>Project Title</h3>
-                        <p>This is a description</p>
+                        <h3>MyReads</h3>
+                        <p>Virtual bookshelf</p>
                         <button type="button" class="small">View details</button>
                     </div>
                 </div>
                 <div class="modal" id="modal-portfolio-2" data-projectid="portfolio2">
                     <div class="modal-content">
                         <span class="modal-close-icon">X</span>
-                        <img src="img/img1-250x150.jpeg" alt="portfolio screenshot">
+                        <img src="img/screenshot-myreads-2x.jpg" alt="portfolio screenshot">
                         <h1>MyReads</h1>
-                        <p>Technology Stack:<br> ES6, React, Redux, NPM, Webpack</p>
-                        <p>Built a social content and discussion web application that allows users to submit content in addition to voting and commenting. 
-                            Leveraged React to build a dynamic user interface, as well as Redux to manage global application state.
+                        <p>Technology Stack:<br> ES6, HTML, CSS, React, Git, NPM, Babel, Webpack</p>
+                        <p>Built a responsive web application that allows users to select and categorize books into a virtual bookshelf. Leveraged React to support a dynamic user interface that interacts with an API server and client library.
                         </p>
                     </div>
                 </div>
                 <div class="project" id="portfolio3">
-                    <img src="img/img1-250x150.jpeg" alt="Project Readable">
+                    <img src="img/screenshot-mobileflashcards-2x.jpg" alt="Mobile Flashcards Project">
                     <div class="project-description">
-                        <h3>Project Title</h3>
-                        <p>This is a description</p>
+                        <h3>Mobile Flashcards</h3>
+                        <p>Cross-platform mobile application</p>
                         <button type="button" class="small">View details</button>
                     </div>
                 </div>
                 <div class="modal" id="modal-portfolio-3" data-projectid="portfolio3">
                     <div class="modal-content">
                         <span class="modal-close-icon">X</span>
-                        <img src="img/img1-250x150.jpeg" alt="portfolio screenshot">
+                        <img src="img/screenshot-mobileflashcards-2x.jpg" alt="Mobile Flashcards Project">
                         <h1>Mobile Flashcards</h1>
-                        <p>Technology Stack:<br> ES6, React, Redux, NPM, Webpack</p>
-                        <p>Built a social content and discussion web application that allows users to submit content in addition to voting and commenting. 
-                            Leveraged React to build a dynamic user interface, as well as Redux to manage global application state.
+                        <p>Technology Stack:<br> React Native, NPM, Babel, Expo, Git</p>
+                        <p>Built a cross-platform (iOS and Android) mobile application that allows users to create and organize collections of flashcards. Leveraged React Native to manage infinite lists, routing, and user input.
                         </p>
                     </div>
                 </div>

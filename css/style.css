@@ -92,7 +92,8 @@ header {
     text-decoration: none;
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
+    display: none;
 }
 
 .site-navigation li {
@@ -112,7 +113,30 @@ header {
     border-top: solid 1px rgb(190, 190, 190);
 }
 
+@media screen and (min-width: 840px) {
+    #menu-icon {
+        display: none;
+    }
+
+    .site-navigation {
+        display: block;
+        flex-flow: row nowrap;
+    }
+
+    .site-navigation li {
+        flex: 1;
+        font-size: 1.1rem;
+        display: inline-block;
+        border: 0;
+    }
+
+    .site-navigation li:nth-of-type(1) {
+        border: 0;
+    }
+}
+
 .site-navigation.overlay {
+    display: block;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -177,11 +201,37 @@ main {
     height: 100vh;
     min-height: 500px;
     justify-content: center;
-    background-image: linear-gradient(rgba(255,254,253,0.7), rgba(255,254,253,0.7)),url('../img/golden-gate-bridge.jpg');
+    background-image: linear-gradient(rgba(255,254,253,0.7), rgba(255,254,253,0.7)),url('../img/golden-gate-bridge-mobile@1x.jpg');
     background-size: cover;
     background-position: left bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;   
+}
+
+@media screen and (min-width: 800px) {
+    .home {
+        background-image: linear-gradient(rgba(255,254,253,0.7), rgba(255,254,253,0.7)),url('../img/golden-gate-bridge-desktop@1x.jpg');        
+    }
+}
+
+/* only for retina displays */
+
+@media 
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .home {
+        background-image: linear-gradient(rgba(255,254,253,0.7), rgba(255,254,253,0.7)),url('../img/golden-gate-bridge-mobile@2x.jpg');
+    }
+}
+
+@media 
+only screen and (min-device-pixel-ratio: 2) and (min-width: 800px),
+only screen and (min-resolution: 192dpi) and (min-width: 800px),
+only screen and (min-resolution: 2dppx) and (min-width: 800px) {
+    .home {
+        background-image: linear-gradient(rgba(255,254,253,0.7), rgba(255,254,253,0.7)),url('../img/golden-gate-bridge-desktop@2x.jpg');
+    }
 }
 
 .intro-text {
@@ -202,17 +252,28 @@ main {
 
 .profile-card {
     width: 80%;
-    max-width: 600px;
+    max-width: 1000px;
     background-color: white;
     box-shadow: 0.5px 0.5px 1px 0.5px rgba(59, 55, 55, 0.4);
 }
 
 .profile-header {
     height: 300px;
-    background-image: url('../img/san-francisco-night-light.jpeg');
+    background-image: url('../img/san-francisco-night-light@1x.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
+}
+
+/* only for retina displays */
+
+@media 
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .profile-header {
+        background-image: url('../img/san-francisco-night-light@2x.jpg');
+    }
 }
 
 .profile-pic {
@@ -240,10 +301,21 @@ main {
     hyphens: auto;
 }
 
+@media screen and (min-width: 840px) {
+    .profile-card {
+        font-size: 1.2rem;
+    }
+
+    .profile-card article {
+        padding: 40px 40px 40px;
+    }
+}
+
 /* Section: Skills */
 
 .skill-list {
     width: 80%;
+    max-width: 1200px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -255,6 +327,16 @@ main {
 
 .devicon {
     width: 6rem;
+}
+
+@media screen and (min-width: 940px) {
+    .skill-list-item {
+        padding: 30px;
+    }
+
+    .devicon {
+        width: 8rem;
+    }
 }
 
 /* Section: Projects */
@@ -270,7 +352,7 @@ main {
 }
 
 .project {
-    width: 250px;
+    width: 80%;
     display: flex;
     flex-flow: column wrap;
     border: solid 0.5px rgba(0, 0, 0, 0.2);
@@ -280,6 +362,12 @@ main {
     background-color: #fefefe;
 }
 
+.project>img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #1c1c1c80;
+}
+
 .project-description {
     text-align: center;
     padding: 10px;
@@ -287,6 +375,25 @@ main {
 
 .project-description>* {
     margin-top: 8px;
+}
+
+@media screen and (min-width: 600px) {
+    .projects-grid {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 15px;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .project {
+        width: 350px;
+    }
+
+    .project-description>button {
+        margin-top: 15px;
+    }
 }
 
 .modal {
@@ -361,6 +468,7 @@ main {
 
 .modal-content img {
     width: 100%;
+    border: 6px solid #1c1c1c7e;
 }
 
 /* Footer */
