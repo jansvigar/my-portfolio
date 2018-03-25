@@ -204,8 +204,14 @@ main {
     background-image: linear-gradient(rgba(255,254,253,0.7), rgba(255,254,253,0.7)),url('../img/golden-gate-bridge-mobile@1x.jpg');
     background-size: cover;
     background-position: left bottom;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-repeat: no-repeat;   
+}
+
+@media screen and (min-width: 640px) {
+    .home {
+        background-attachment: fixed;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -215,7 +221,6 @@ main {
 }
 
 /* only for retina displays */
-
 @media 
 only screen and (min-device-pixel-ratio: 2),
 only screen and (min-resolution: 192dpi),
