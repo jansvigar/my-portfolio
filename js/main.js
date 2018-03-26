@@ -35,7 +35,6 @@ for(var i = 0; i < scrollElements.length; i++) {
 }
 
 function showModal(modal) {
-    modal.className = modal.className.replace(/\bhidden\b/g, '');
     modal.className = 'modal open';
 }
 
