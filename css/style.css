@@ -39,7 +39,7 @@ a {
   color: inherit;
 }
 
-button {
+button, .home>a {
   padding: 10px;
   background-color: rgba(255, 255, 254, 0.2);
   font-size: 1.2rem;
@@ -48,14 +48,14 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+button:hover, .home>a:hover {
   transform: scale(1.02, 1.02);
   transition: all 0.2s ease-in-out;
   background-color: #3e606f;
   color: #fff;
 }
 
-button:focus {
+button:focus, .home>a:focus {
   outline: none;
 }
 
