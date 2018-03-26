@@ -65,6 +65,7 @@ button:focus {
 
 .hidden {
     visibility: hidden;
+    display: none;
 }
 
 /* Header */
@@ -413,6 +414,7 @@ only screen and (min-resolution: 2dppx) {
     color: #1C1C1C;
     opacity: 0;
     visibility: hidden;
+    display: block;
     transition: visibility 0s linear 500ms, opacity 500ms;
 }
 

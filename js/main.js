@@ -66,36 +66,34 @@ function closeMenu() {
 
 /**
  * Function to animate smooth scrolling to the destination. 
- * inspired by http://stackoverflow.com/a/24559613/728480.
+ * inspired by https://gist.github.com/andjosh/6764939.
  */
-function scrollTo(destinationInPixel, durationInMs) {
-    if(scrollInterval) clearInterval(scrollInterval);
-
-    startingPos =   document.documentElement.scrollTop 
-                    || document.body.scrollTop 
-                    || 0;
-
-    var headerHeight = document.querySelector('header').offsetHeight;
-    destinationInPixel = destinationInPixel - headerHeight < 0 ? 0 : destinationInPixel - headerHeight;
-
-    if(destinationInPixel === startingPos) return;
-
-    var diff = destinationInPixel - startingPos;
-    var scrollStep = Math.PI / (durationInMs / 10);
-    var count = 0, currentPos;
-    var limit = Math.max( document.body.scrollHeight, document.body.offsetHeight, 
-        document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight );
-    var maxScrollHeight = limit - window.innerHeight;
-    destinationInPixel = Math.min(destinationInPixel, maxScrollHeight);
-
-    scrollInterval = setInterval(function() {
-        if((document.documentElement.scrollTop || document.body.scrollTop) != destinationInPixel) {
-            count++;
-            currentPos = startingPos + diff * (0.5 - 0.5 * Math.cos(count * scrollStep));
-            document.documentElement.scrollTop = currentPos;
-            document.body.scrollTop = currentPos;
-        } else {
-            clearInterval(scrollInterval);
+function scrollTo(to, duration) {
+    var to = (to - 90) < 0 ? 0 : (to - 90),
+        start = document.documentElement.scrollTop || document.body.scrollTop || 0,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+        
+    var animateScroll = function(){        
+        currentTime += increment;
+        var val = Math.easeInOutQuad(currentTime, start, change, duration);
+        document.documentElement.scrollTop = val;
+        document.body.scrollTop = val;
+        if(currentTime < duration) {
+            setTimeout(animateScroll, increment);
         }
-    }, 10)
+    };
+    animateScroll();
 }
+
+//t = current time
+//b = start value
+//c = change in value
+//d = duration
+Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d/2;
+      if (t < 1) return c/2*t*t + b;
+      t--;
+      return -c/2 * (t*(t-2) - 1) + b;
+};
