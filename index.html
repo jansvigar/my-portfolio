@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116492100-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-116492100-1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -25,19 +34,19 @@
             <nav class="site-navigation">
                 <ul>
                     <li class="scroll">
-                        <a href="#home">Home</a>
+                        <a data-scroll href="#home">Home</a>
                     </li>
                     <li class="scroll">
-                        <a href="#about">About</a>
+                        <a data-scroll href="#about">About</a>
                     </li>
                     <li class="scroll">
-                        <a href="#skills">Skills</a>
+                        <a data-scroll href="#skills">Skills</a>
                     </li>
                     <li class="scroll">
-                        <a href="#projects">Projects</a>
+                        <a data-scroll href="#projects">Projects</a>
                     </li>
                     <li class="scroll">
-                        <a href="#footer">Contact</a>
+                        <a data-scroll href="#footer">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -47,19 +56,19 @@
             <span class="close-icon">X</span>
             <ul>
                 <li class="scroll">
-                    <a href="#home">Home</a>
+                    <a data-scroll href="#home">Home</a>
                 </li>
                 <li class="scroll">
-                    <a href="#about">About</a>
+                    <a data-scroll href="#about">About</a>
                 </li>
                 <li class="scroll">
-                    <a href="#skills">Skills</a>
+                    <a data-scroll href="#skills">Skills</a>
                 </li>
                 <li class="scroll">
-                    <a href="#projects">Projects</a>
+                    <a data-scroll href="#projects">Projects</a>
                 </li>
                 <li class="scroll">
-                    <a href="#footer">Contact</a>
+                    <a data-scroll href="#footer">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -330,7 +339,15 @@
             <p class="copyright">Ⓒ 2018 Jan Vigar. All rights reserved.</p>
         </footer>
     </main>
+
+    <script src="vendor/smooth-scroll.min.js"></script>
+    <script src="vendor/smooth-scroll.polyfills.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            header: '.site-header'
+        });
+    </script>
 </body>
 
 </html>
