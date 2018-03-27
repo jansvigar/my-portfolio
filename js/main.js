@@ -1,8 +1,16 @@
 var menuIcon = document.querySelector("#menu-icon");
 var menuOverlay = document.querySelector(".site-navigation.overlay");
+var menuOverlayLinks = document.querySelectorAll(".site-navigation.overlay > ul > li > a");
 var menuOverlayCloseIcon = document.querySelector(
   ".site-navigation .close-icon"
 );
+
+for(var i = 0; i < menuOverlayLinks.length; i++) {
+    var link = menuOverlayLinks[i];
+    link.addEventListener("click", function() {
+        closeMenu();
+    });
+}
 
 var modalElements = document.querySelectorAll(".modal");
 

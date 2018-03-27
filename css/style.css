@@ -39,7 +39,8 @@ a {
   color: inherit;
 }
 
-button, .home>a {
+button,
+.home > a {
   padding: 10px;
   background-color: rgba(255, 255, 254, 0.2);
   font-size: 1.2rem;
@@ -48,14 +49,16 @@ button, .home>a {
   cursor: pointer;
 }
 
-button:hover, .home>a:hover {
+button:hover,
+.home > a:hover {
   transform: scale(1.02, 1.02);
   transition: all 0.2s ease-in-out;
   background-color: #3e606f;
   color: #fff;
 }
 
-button:focus, .home>a:focus {
+button:focus,
+.home > a:focus {
   outline: none;
 }
 
@@ -109,10 +112,14 @@ header {
 
 .site-navigation > ul > li {
   text-align: center;
-  padding: 20px;
   font-size: 1.5rem;
   border-bottom: solid 1px rgb(190, 190, 190);
   cursor: pointer;
+}
+
+.site-navigation > ul > li > a {
+  display: block;
+  padding: 20px;
 }
 
 .site-navigation > ul > li:hover {
