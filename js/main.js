@@ -70,17 +70,11 @@ function showModal(modal) {
   lastFocus = document.activeElement;
   modal.querySelector(".modal-content").focus();
   body.className = "noscroll";
-  body.addEventListener("touchmove", function(e) {
-        e.preventDefault();
-  });
 }
 
 function closeModal(modal) {
   modal.className = "modal";
   body.className = "";
-  body.removeEventListener("touchmove", function(e) {
-    e.preventDefault();
-  });
   lastFocus.focus();
 }
 
