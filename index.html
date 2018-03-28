@@ -26,49 +26,49 @@
 <body>
     <header class="site-header">
         <div class="header-title-area">
-            <a class="brand scroll" href="#home">
+            <a class="brand scroll" href="#home" tabindex="0">
                 <img src="img/jv_logo.svg" alt="logo" class="logo">
                 <span class="site-title">janvigar.com</span>
             </a>
-            <i id="menu-icon" class="fas fa-bars fa-lg"></i>
+            <i id="menu-icon" class="fas fa-bars fa-lg" tabindex="0"></i>
             <nav class="site-navigation">
                 <ul>
                     <li>
-                        <a data-scroll href="#home">Home</a>
+                        <a data-scroll href="#home" tabIndex="0">Home</a>
                     </li>
                     <li>
-                        <a data-scroll href="#about">About</a>
+                        <a data-scroll href="#about" tabindex="0">About</a>
                     </li>
                     <li>
-                        <a data-scroll href="#skills">Skills</a>
+                        <a data-scroll href="#skills" tabindex="0">Skills</a>
                     </li>
                     <li>
-                        <a data-scroll href="#projects">Projects</a>
+                        <a data-scroll href="#projects" tabindex="0">Projects</a>
                     </li>
                     <li>
-                        <a data-scroll href="#footer">Contact</a>
+                        <a data-scroll href="#footer" tabindex="0">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
         <!-- hidden navigation for mobile -->
         <nav class="site-navigation overlay hidden">
-            <span class="close-icon">X</span>
+            <span role="button" class="close-icon" tabindex="0">X</span>
             <ul>
                 <li>
-                    <a data-scroll href="#home">Home</a>
+                    <a data-scroll href="#home" tabindex="0">Home</a>
                 </li>
                 <li>
-                    <a data-scroll href="#about">About</a>
+                    <a data-scroll href="#about" tabindex="0">About</a>
                 </li>
                 <li>
-                    <a data-scroll href="#skills">Skills</a>
+                    <a data-scroll href="#skills" tabindex="0">Skills</a>
                 </li>
                 <li>
-                    <a data-scroll href="#projects">Projects</a>
+                    <a data-scroll href="#projects" tabindex="0">Projects</a>
                 </li>
                 <li>
-                    <a data-scroll href="#footer">Contact</a>
+                    <a data-scroll href="#footer" tabindex="0">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -232,8 +232,8 @@
                         <button type="button" class="small">View details</button>
                     </div>
                 </div>
-                <div class="modal" id="modal-portfolio-1" data-projectid="portfolio1">
-                    <div class="modal-content">
+                <div class="modal" role="dialog" id="modal-portfolio-1" data-projectid="portfolio1">
+                    <div class="modal-content" tabindex="0">
                         <span class="modal-close-icon">X</span>
                         <img src="img/screenshot-readable-500.jpg" alt="Readable Project Screenshot" srcset="img/screenshot-readable-250.jpg 250w,
                                      img/screenshot-readable-500.jpg 500w,
@@ -261,8 +261,8 @@
                         <button type="button" class="small">View details</button>
                     </div>
                 </div>
-                <div class="modal" id="modal-portfolio-2" data-projectid="portfolio2">
-                    <div class="modal-content">
+                <div class="modal" role="dialog" id="modal-portfolio-2" data-projectid="portfolio2">
+                    <div class="modal-content" tabindex="0">
                         <span class="modal-close-icon">X</span>
                         <img src="img/screenshot-myreads-500.jpg" alt="MyReads Project Screenshot" srcset="img/screenshot-myreads-250.jpg 250w,
                                     img/screenshot-myreads-500.jpg 500w,
@@ -290,8 +290,8 @@
                         <button type="button" class="small">View details</button>
                     </div>
                 </div>
-                <div class="modal" id="modal-portfolio-3" data-projectid="portfolio3">
-                    <div class="modal-content">
+                <div class="modal" role="dialog" id="modal-portfolio-3" data-projectid="portfolio3">
+                    <div class="modal-content" tabindex="0">
                         <span class="modal-close-icon">X</span>
                         <img src="img/screenshot-mobileflashcards-500.jpg" alt="Mobile Flashcards Project Screenshot" srcset="img/screenshot-mobileflashcards-250.jpg 250w,
                                     img/screenshot-mobileflashcards-500.jpg 500w,

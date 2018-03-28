@@ -57,11 +57,6 @@ button:hover,
   color: #fff;
 }
 
-button:focus,
-.home > a:focus {
-  outline: none;
-}
-
 .big {
   padding: 20px;
 }
@@ -72,6 +67,7 @@ button:focus,
 
 .hidden {
   visibility: hidden;
+  display: none;
 }
 
 /* Header */
@@ -168,7 +164,8 @@ header {
   z-index: 9;
   transform: translateX(100%);
   opacity: 0;
-  transition: transform 0.5s ease-in, opacity 0.5s;
+  visibility: hidden;
+  transition: visibility 0s linear 500ms, transform 500ms ease-in, opacity 500ms;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -177,7 +174,7 @@ header {
   transform: translateX(0);
   opacity: 1;
   visibility: visible;
-  transition: transform 0.5s ease-in, opacity 0.5s;
+  transition: visibility 0s linear, transform 500ms ease-in, opacity 500ms;
 }
 
 .site-navigation.overlay .close-icon {
@@ -187,6 +184,7 @@ header {
   font-size: 30px;
   font-weight: 600;
   color: rgba(109, 109, 109, 0.5);
+  cursor: pointer;
 }
 
 .brand {
@@ -510,6 +508,10 @@ main {
 .modal-content img {
   width: 100%;
   border: 6px solid #1c1c1c7e;
+}
+
+.noscroll {
+  overflow: hidden;
 }
 
 /* Footer */
