@@ -83,15 +83,9 @@ function openMenu() {
   menuOverlay.className = menuOverlay.className.replace(/\bhidden\b/g, "");
   body.className = "noscroll";
   menuOverlayCloseIcon.addEventListener("click", closeMenu);
-  body.addEventListener("touchmove", function(e) {
-    e.preventDefault();
-});
 }
 
 function closeMenu() {
   menuOverlay.className = menuOverlay.className.replace(/\bopen\b/g, "");
   body.className = "";
-  body.removeEventListener("touchmove", function(e) {
-    e.preventDefault();
-  });
 }

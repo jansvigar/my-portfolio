@@ -16,6 +16,7 @@ html,
 main {
   height: 100%;
   min-height: 100vh;
+  overflow: auto;
 }
 
 section {
