@@ -7,11 +7,11 @@ var menuOverlayCloseIcon = document.querySelector(
 );
 var lastFocus;
 
-for(var i = 0; i < menuOverlayLinks.length; i++) {
-    var link = menuOverlayLinks[i];
-    link.addEventListener("click", function() {
-        closeMenu();
-    });
+for (var i = 0; i < menuOverlayLinks.length; i++) {
+  var link = menuOverlayLinks[i];
+  link.addEventListener("click", function () {
+    closeMenu();
+  });
 }
 
 var modalElements = document.querySelectorAll(".modal");
@@ -23,46 +23,46 @@ for (var i = 0; i < modalElements.length; i++) {
     .getElementById(modal.dataset.projectid)
     .querySelector("button");
 
-  (function(modal) {
-    viewDetailBtn.addEventListener("click", function() {
+  (function (modal) {
+    viewDetailBtn.addEventListener("click", function () {
       showModal(modal);
     });
 
-    modalCloseBtn.addEventListener("click", function() {
+    modalCloseBtn.addEventListener("click", function () {
       closeModal(modal);
     });
   })(modal);
 }
 
-window.addEventListener("click", function(e) {
+window.addEventListener("click", function (e) {
   if (e.target.className === "modal open") {
     closeModal(e.target);
   }
 });
 
-document.addEventListener("keydown", function(e) {
-    if(!e.keyCode || e.keyCode === 27) {
-        var openedModal = e.currentTarget.querySelector(".modal.open");
-        if(openedModal) closeModal(openedModal);
-        var openedMenu = e.currentTarget.querySelector(".site-navigation.overlay.open");
-        if(openedMenu) closeMenu();
-    }
+document.addEventListener("keydown", function (e) {
+  if (!e.keyCode || e.keyCode === 27) {
+    var openedModal = e.currentTarget.querySelector(".modal.open");
+    if (openedModal) closeModal(openedModal);
+    var openedMenu = e.currentTarget.querySelector(".site-navigation.overlay.open");
+    if (openedMenu) closeMenu();
+  }
 });
 
 menuIcon.addEventListener("click", openMenu);
 
-menuIcon.addEventListener("keyup", function(e) {
-    e.preventDefault();
-    if(!e.keyCode || e.keyCode === 13) {
-        menuIcon.click();
-    }
+menuIcon.addEventListener("keyup", function (e) {
+  e.preventDefault();
+  if (!e.keyCode || e.keyCode === 13) {
+    menuIcon.click();
+  }
 })
 
-menuOverlayCloseIcon.addEventListener("keyup", function(e) {
-    e.preventDefault();
-    if(!e.keyCode || e.keyCode === 13) {
-        closeMenu();
-    }
+menuOverlayCloseIcon.addEventListener("keyup", function (e) {
+  e.preventDefault();
+  if (!e.keyCode || e.keyCode === 13) {
+    closeMenu();
+  }
 })
 
 function showModal(modal) {
